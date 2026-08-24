@@ -5,12 +5,12 @@
 class Flock < Formula
   desc "Teraflock node daemon + CLI — earn credits serving LLM inference on idle hardware"
   homepage "https://teraflock.ai"
-  version "0.1.0"
+  version "0.1.3"
   license "Apache-2.0"
 
   on_macos do
-    url "https://github.com/teraflock/flockd/releases/download/v0.1.0/flockd_0.1.0_darwin_all.tar.gz"
-    sha256 "2ddfd3ed72335f2c7c746801583edb1a8c5358b5c8089595153c6eb19547a05f"
+    url "https://github.com/teraflock/flockd/releases/download/v0.1.3/flockd_0.1.3_darwin_all.tar.gz"
+    sha256 "8e5fba6c6ffeff90320097c8270e459379150ea309a90ee6b6776f3f3979fca0"
 
     define_method(:install) do
       bin.install "flockd"
@@ -20,16 +20,16 @@ class Flock < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/teraflock/flockd/releases/download/v0.1.0/flockd_0.1.0_linux_amd64.tar.gz"
-      sha256 "d6178276459839711adec5985b10c0c52fadc4dcddf040e90303227c332e5dc1"
+      url "https://github.com/teraflock/flockd/releases/download/v0.1.3/flockd_0.1.3_linux_amd64.tar.gz"
+      sha256 "0744ac9504ba2298ff71bbb8705bb48dc17feeb5ce27104260861ef65c2ff994"
       define_method(:install) do
         bin.install "flockd"
         bin.install "flock"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/teraflock/flockd/releases/download/v0.1.0/flockd_0.1.0_linux_arm64.tar.gz"
-      sha256 "64203f9f1c3ae77227af4f93ea25dcd5c440dab0b5ec6caaafa9fa8521fd34bc"
+      url "https://github.com/teraflock/flockd/releases/download/v0.1.3/flockd_0.1.3_linux_arm64.tar.gz"
+      sha256 "51bc897489c6d6d6012bfdebc90ace72002c59e18c4564179880281ac7115f4d"
       define_method(:install) do
         bin.install "flockd"
         bin.install "flock"
