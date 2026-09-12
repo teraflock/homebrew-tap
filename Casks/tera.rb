@@ -6,10 +6,10 @@
 # a Gatekeeper dialog (teraflock/flockd#47). The package installs to
 # /usr/local/bin, which is why this cask asks for your password once.
 cask "tera" do
-  version "0.6.6"
-  sha256 "a2686a829d28e1d9e83f9357b885082512b75028201d5e4de662183922d5f03e"
+  version "0.6.7"
+  sha256 "0cc8d02024ffa5d9f7710642133d198c01c76f9dabbb2f46e7c9ea3888cc9b37"
 
-  url "https://github.com/teraflock/flockd/releases/download/v#{version}/teraflock_0.6.6_darwin_all.pkg"
+  url "https://github.com/teraflock/flockd/releases/download/v#{version}/teraflock_#{version}_darwin_all.pkg"
   name "tera"
   desc "Teraflock node daemon + CLI — earn credits serving LLM inference on idle hardware"
   homepage "https://teraflock.ai"
@@ -18,9 +18,9 @@ cask "tera" do
     skip "Auto-generated on release."
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
-  pkg "teraflock_0.6.6_darwin_all.pkg"
+  pkg "teraflock_#{version}_darwin_all.pkg"
 
   uninstall pkgutil: "ai.teraflock.tera",
             launchctl: "dev.teraflock.flockd"
