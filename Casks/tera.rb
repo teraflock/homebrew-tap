@@ -6,8 +6,8 @@
 # a Gatekeeper dialog (teraflock/flockd#47). The package installs to
 # /usr/local/bin, which is why this cask asks for your password once.
 cask "tera" do
-  version "0.6.7"
-  sha256 "0cc8d02024ffa5d9f7710642133d198c01c76f9dabbb2f46e7c9ea3888cc9b37"
+  version "0.6.8"
+  sha256 "abaa7bbc54ede3a2594cc96bacb2b427f2d1e48adb8ac102a0072b7e33d1505f"
 
   url "https://github.com/teraflock/flockd/releases/download/v#{version}/teraflock_#{version}_darwin_all.pkg"
   name "tera"
