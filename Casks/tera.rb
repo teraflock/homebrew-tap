@@ -6,8 +6,8 @@
 # a Gatekeeper dialog (teraflock/flockd#47). The package installs to
 # /usr/local/bin, which is why this cask asks for your password once.
 cask "tera" do
-  version "0.9.3"
-  sha256 "e0ae9dc8b93d38e17315f23c06427063d45860a2568b60ff2d8075535c2e14b2"
+  version "0.9.4"
+  sha256 "256e576d28f5b9258be4397d345d9b0a820adfb6075b86485adbcc1c7ffcaed1"
 
   url "https://github.com/teraflock/flockd/releases/download/v#{version}/teraflock_#{version}_darwin_all.pkg"
   name "tera"
@@ -27,7 +27,7 @@ cask "tera" do
 
   caveats <<~EOS
     To join the mesh you need an invite from teraflock.ai — then:
-      tera login      # opens the claim page in your browser
+      tera login      # connects this Mac: asks for a code from app.teraflock.com/connect
       tera up         # installs and starts the background service
       tera dashboard  # watch it earn
   EOS
